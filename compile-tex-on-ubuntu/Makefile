@@ -1,10 +1,9 @@
-filename=MAIN_LATEX_FILE_NAME_WITHOUT_.tex
+filename=
 
 pdf:
-	latex ${filename}
-	bibtex ${filename}||true
-	latex ${filename}
-	latex ${filename}
+	pdflatex ${filename}.tex
+
+#paper:
 
 read:
 	open ${filename}.pdf
