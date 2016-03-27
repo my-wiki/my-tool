@@ -1,10 +1,15 @@
-filename=
+filename=main
 
 pdf:
 	pdflatex ${filename}.tex
 
-#paper:
+paper:
+	pdflatex ${filename}.tex
+	bibtex ${filename}
+	pdflatex ${filename}.tex
+	pdflatex ${filename}.tex
 
+	
 read:
 	open ${filename}.pdf
 
